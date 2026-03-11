@@ -41,3 +41,30 @@ position: relative; /* Per posicionar el text */
     margin-bottom: 3rem; /* Espai entre el títol i el botó */
 
 }
+
+/* 4. EL BOTÓ CENTRAT */
+.btn-cta {
+    display: inline-block; /*Mostrar com a bloc en línia */
+    background-color: #f1c40f; /* Color de fons del botó */
+    color: #1a1a1a; /* Color del text del botó */
+    padding: 15px 30px; /* Espaiat dins del botó */
+    font-size: 1.8rem; /* Mida del text del botó */
+    text-decoration: none; /* Eliminar subratllat */
+    border-radius: 5px; /* Cantons arrodonits */
+    transition: background-color 0.3s; /* Transició suau per al hover */
+}
+.btn-cta:hover {
+    background-color: #e0b90f; /* Color de fons més fosc al passar el ratolí */
+}
+
+/* 5. CANVI D'IMATGE PER A DISPOSITIUS MÒBILS */
+@media (max-widht: 768px) {
+    .hero {
+        background-image: url('../img/hero640x1304.jpg'); /* Imatge més petita per a mòbils */
+    }
+}
+
+/* Fem la lletra més petita en mòbils per a millor llegibilitat */
+.hero-coningut h1 {
+    font-size: 3.5rem; /* Mida del títol més petita en mòbils */
+}
