@@ -1,0 +1,43 @@
+/* REQUISITS GENERALS */
+* { box-sizing: border-box; } /* Box sizing per a tots els elements */
+html { font-size: 62.5%; } 
+body { font-family: 'Montserrat', sans-serif margin: 0; } /* Requisit: Box model i hack rem */
+
+/*1. CAIXA DE HERO */
+.hero {
+height: 100vh; /* Altura de la finestra */
+
+/* IMATGE PER DEFECTE */
+background-image: url('../img/hero1920x1304.jpg'); /* Ruta de la imatge */
+background-size: cover; /* Cobrir tota la caixa */
+background-position: center; /* Centrar la imatge */
+
+display: flex; /* Flexbox per centrar el contingut */
+justify-content: center; /* Centrar horitzontalment */
+align-items: center; /* Centrar verticalment */
+position: relative; /* Per posicionar el text */
+}
+
+/* 2. EL VEL FOSC (Contrast correcte per a la llegibilitat) */
+.hero::before {
+    content: ''; /* Element buit */
+    position: absolute; /* Posicionament absolut */
+    top: 0; left: 0; right: 0; bottom: 0; /* Cobrir tota la caixa */
+    background-color: rgba(0, 0, 0, 0.5); /* Vel fosc semitransparent */
+    z-index: 1; /* Col·locar darrere del text */
+}
+
+/* 3. EL TEXT I BOTÓ CENTRATS */
+.hero-contingut {
+    position: relative; /* Per estar per sobre del vel */
+    z-index: 2; /* Col·locar per sobre del vel */
+    text-align: center; /* Centrar el text */
+    color: #fff; /* Text blanc per contrastar amb el vel */
+    padding: 20px; /* Espaiat al voltant del text */
+}
+
+.hero-contingut h1 { /* Títol principal */
+    font-size: 2rem; /* Mida gran per a l'impacte */
+    margin-bottom: 3rem; /* Espai entre el títol i el botó */
+
+}
